@@ -1,0 +1,15 @@
+# dependencies
+node_modules
+
+# generated files
+demo/dist
+coverage
+lib
+styleguide
+
+# temporary editor files
+.*.swp
+.idea/
+
+# OS stuff
+.DS_Store

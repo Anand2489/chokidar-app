@@ -1,0 +1,89 @@
+{
+  "name": "chokidar-app",
+  "version": "1.0.3",
+  "description": "File changes watcher & post processor",
+  "main": "index.js",
+  "bin": {
+    "start-ca": "./bin/index.js"
+  },
+  "scripts": {
+    "watch-ch": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "preferGlobal": true,
+  "author": "Anand Gupta",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^3.0.0",
+    "chokidar": "^3.3.1",
+    "cli-spinners": "^2.2.0",
+    "debounce": "^1.2.0",
+    "ora": "^4.0.3",
+    "yargs": "^15.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.16.0"
+  },
+  "engines": {
+    "node": ">= 8.10.0"
+  },
+  "eslintConfig": {
+    "extends": "eslint:recommended",
+    "parserOptions": {
+      "ecmaVersion": 9,
+      "sourceType": "script"
+    },
+    "env": {
+      "node": true,
+      "es6": true
+    },
+    "rules": {
+      "array-callback-return": "error",
+      "no-empty": [
+        "error",
+        {
+          "allowEmptyCatch": true
+        }
+      ],
+      "no-lonely-if": "error",
+      "no-var": "error",
+      "object-shorthand": "error",
+      "prefer-arrow-callback": [
+        "error",
+        {
+          "allowNamedFunctions": true
+        }
+      ],
+      "prefer-const": [
+        "error",
+        {
+          "ignoreReadBeforeAssign": true
+        }
+      ],
+      "prefer-destructuring": [
+        "error",
+        {
+          "object": true,
+          "array": false
+        }
+      ],
+      "prefer-spread": "error",
+      "prefer-template": "error",
+      "radix": "error",
+      "strict": "error",
+      "quotes": [
+        "error",
+        "single"
+      ]
+    }
+  },
+  "keywords": [
+    "fs",
+    "watch",
+    "watchFile",
+    "watcher",
+    "watching",
+    "file",
+    "fsevents"
+  ]
+}
