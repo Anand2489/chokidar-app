@@ -25,15 +25,16 @@ exports.start = function () {
     log(orange('Build: Started'))
     spinner.start()
 
-    exec(c1, (err, stdout) => {
-      log(green('Build: Complete'))
+    exec(c1, (err, stdout, stderr) => {
       spinner.stop()
+      log(`stdout: ${stdout}`)
+      log(`stderr: ${stderr}`)
 
       if (err) {
-        log(error('make build error:', err))
+        log(error(`${c1} error:`, err))
         return
       }
-      log(`stdout: ${stdout}`)
+      log(green('Build: Complete'))
       if (postBuildCmd) {
         log(orange(`Starting Cmd: ${postBuildCmd}`))
         spinner.start()
